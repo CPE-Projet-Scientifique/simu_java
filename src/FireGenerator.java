@@ -3,11 +3,15 @@ import java.util.Random;
 public class FireGenerator {
     private Random random = new Random();
 
-    public Fire generateRandomFire(int mapWidth, int mapHeight) {
-        int x = random.nextInt(mapWidth);
-        int y = random.nextInt(mapHeight);
+    public Fire generateRandomFire() {
+        double minLatitude = 45.70;
+        double maxLatitude = 45.80;
+        double minLongitude = 4.80;
+        double maxLongitude = 4.90;
 
-        // Génération de l'intensité aléatoire
+        double latitude = minLatitude + (maxLatitude - minLatitude) * random.nextDouble();
+        double longitude = minLongitude + (maxLongitude - minLongitude) * random.nextDouble();
+
         int intensityChance = random.nextInt(100);
         String intensity;
         int frequency;
@@ -22,7 +26,6 @@ public class FireGenerator {
             intensity = "forte";
             frequency = 15; // Feux forts toutes les 15 secondes
         }
-
-        return new Fire(x, y, intensity, frequency);
+        return new Fire(latitude, longitude, intensity, frequency);
     }
 }
