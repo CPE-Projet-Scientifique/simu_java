@@ -31,6 +31,7 @@ public class Main {
             System.out.println("Feu généré :");
             System.out.println("Latitude : " + fire.getLatitude());
             System.out.println("Longitude : " + fire.getLongitude());
+            System.out.println("Température : " + fire.getTemperature() + "°C");
             System.out.println("Intensité : " + fire.getIntensity());
             System.out.println("Fréquence : " + fire.getFrequency() + " secondes");
             System.out.println("-----------------------------------");
