@@ -14,15 +14,19 @@ public class FireGenerator {
 
         int temperature = 20 + random.nextInt(71);
         int frequency;
+        int pompier_necessaire;
 
         if (temperature < 50) {
             frequency = 5;
+            pompier_necessaire = 5;
         } else if (temperature < 75) {
             frequency = 10;
+            pompier_necessaire = 10;
         } else {
             frequency = 15;
+            pompier_necessaire = 15;
         }
 
-        return new Fire(latitude, longitude, temperature, frequency);
+        return new Fire(latitude, longitude, temperature, frequency, pompier_necessaire);
     }
 }

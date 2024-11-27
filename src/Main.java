@@ -34,6 +34,8 @@ public class Main {
             System.out.println("Température : " + fire.getTemperature() + "°C");
             System.out.println("Intensité : " + fire.getIntensity());
             System.out.println("Fréquence : " + fire.getFrequency() + " secondes");
+            System.out.println("Pompiers nécessaires : " + fire.getPompier_necessaire());
+            System.out.println("Pompiers sur place : " + fire.getPompier_sur_place());
             System.out.println("-----------------------------------");
 
             // Partie base de données commentée
